@@ -12,7 +12,7 @@
     "Localhost": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/produtos",
+      "launchUrl": "",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Localhost"
       }
@@ -20,7 +20,7 @@
     "Development": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/produtos",
+      "launchUrl": "",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -28,7 +28,7 @@
     "service": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
