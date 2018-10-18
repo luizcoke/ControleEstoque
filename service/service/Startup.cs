@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace service
 {
@@ -27,6 +28,11 @@ namespace service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Controle Estoque API", Version = "v1" });
+            });
 
             var connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<ControleEstoqueContext>
@@ -46,6 +52,21 @@ namespace service
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger(c =>
+            {
+                c.PreSerializeFilters.Add((swaggerDoc, httpRequest) =>
+                {
+                    swaggerDoc.BasePath = "/";
+                });
+            });
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+                c.RoutePrefix = string.Empty;
+            });
+
             app.UseMvc();
         }
     }
