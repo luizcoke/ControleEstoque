@@ -1,36 +1,35 @@
 /*
  Template cache module.
 */
-angular.module('templates', []);
+angular.module('templates', [
+    'produtos.list',
+    'produtos.form'
+]);
 
 var App = angular.module('App', ['ngRoute', 'ngResource', 'templates']);
 
-App.config(function($logProvider, $routeProvider, $httpProvider, $compileProvider, $locationProvider){
+App.config(function ($logProvider, $routeProvider, $httpProvider, $compileProvider, $locationProvider) {
 
     var enableDebug = localStorage.debug == true; // jshint ignore:line
 
     $logProvider.debugEnabled(enableDebug);
-    
+
     $compileProvider.debugInfoEnabled(enableDebug);
 
-    $locationProvider.html5Mode(true).hashPrefix('');
+    // $locationProvider.html5Mode(true).hashPrefix('!');
+    $locationProvider.hashPrefix('');
 
     $httpProvider.interceptors.push('HttpInterceptor');
 
     $httpProvider.defaults.headers.common.Accept = 'application/json';
 
     $routeProvider
-        .when('/', {
-            templateUrl: 'home.html',
-            controller: 'HomeCtrl',
-            reloadOnSearch: false
-        })
         .otherwise({
-            redirectTo: '/'
+            redirectTo: '/produtos'
         });
 
 });
 
-App.run(function(){
-	
+App.run(function () {
+
 });

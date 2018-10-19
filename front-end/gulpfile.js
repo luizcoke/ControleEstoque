@@ -37,16 +37,16 @@ var assets = {
   scss: [
     'assets/fontawesome/web-fonts-with-css/scss/**/*.scss'
   ],
-  copy: [
-    // 'assets/semantic/dist/themes/**/*'
-  ]
+  copy: []
 };
 
 var app = {
   scripts: [
     'src/*.js',
     'src/scripts/*.js',
-    'src/scripts/**/*.js'
+    'src/scripts/**/*.js',
+    'src/produtos/*.js',
+    'src/produtos/**/*.js'
   ],
   styles: [
     'src/styles/*.scss',
@@ -56,8 +56,10 @@ var app = {
     'src/images/*'
   ],
   views: [
-    'src/views/*.html',
-    'src/views/**/*.html'
+    'src/@shared/*.html',
+    'src/@shared/**/*.html',
+    'src/produtos/*.html',
+    'src/produtos/**/*.html'
   ],
   index: 'src/index.html'
 };
@@ -171,9 +173,7 @@ gulp.task('serve', () => {
   });
 });
 
-
 gulp.task('assets', ['assets-scripts', 'assets-styles', 'assets-copy', 'assets-fonts', 'assets-scss']);
-
 gulp.task('app-prod', ['app-scripts-prod', 'app-styles-prod', 'app-views']);
 gulp.task('app-dev', ['app-scripts-dev', 'app-styles-dev', 'app-views']);
 
@@ -181,7 +181,6 @@ gulp.task('app-dev', ['app-scripts-dev', 'app-styles-dev', 'app-views']);
  * Build production app
  */
 gulp.task('prod', ['assets', 'app-prod', 'jshint']);
-
 
 var devTasks = ['assets', 'app-dev', 'jshint', 'watch-dev'];
 

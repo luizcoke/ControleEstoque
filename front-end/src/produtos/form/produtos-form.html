@@ -1,0 +1,79 @@
+<div class="produtos-form bg-light">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <div class="py-3 text-center">
+                    <div class="text-center">
+                        <i class="fas fa-barcode fa-5x"></i>
+                        <h2>Cadastro de produto</h2>
+                        <p class="lead">Preencha o formulário abaixo para adicionar novos itens ao cadastro</p>
+                    </div>
+                </div>
+
+                <form class="needs-validation" name="produtoForm" ng-submit="submitForm(produtoForm.$valid)" novalidate>
+
+                    <div class="mb-3">
+                        <label for="nome">Nome <span class="text-muted"></span></label>
+                        <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome do produto"
+                            required ng-model="produto.nome" ng-class="{ 'is-invalid' : produtoForm.nome.$invalid && produtoForm.$submitted }">
+                        <div class="invalid-feedback" ng-show="produtoForm.nome.$invalid && produtoForm.$submitted">
+                            Nome do produto é obrigatório
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address">Descrição</label>
+                        <textarea type="textarea" class="form-control" id="descricao"></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 mb-3">
+                            <label for="categoria">Categoria</label>
+                            <select class="custom-select d-block w-100" id="categoria" required>
+                                <option value="">selecione...</option>
+                                <option>Bloco de Papel</option>
+                                <option>Carvão Vegetal</option>
+                                <option>Colas</option>
+                                <option>Compasso Técnico</option>
+                                <option>Curva Francesa</option>
+                                <option>Eletricidade</option>
+                                <option>Escalímetro</option>
+                                <option>Esquadro</option>
+                                <option>Gabaritos</option>
+                                <option>Lápis Técnico</option>
+                                <option>Limpeza</option>
+                                <option>Lixa de Madeira</option>
+                                <option>Maletas Artísticas</option>
+                                <option>Mesa de Luz</option>
+                                <option>Mesa Digitalizadora</option>
+                                <option>Papel Layout</option>
+                                <option>Papel Vegetal</option>
+                                <option>Pintura</option>
+                                <option>Pranchetas</option>
+                                <option>Régua</option>
+                                <option>Telas e Painéi</option>s
+                                <option>Tintas</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state">Quantidade</label>
+                            <input type="number" class="form-control" id="Quantidade">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="codigoBarras">Código de barras</label>
+                            <input type="number" name="codigoBarras" class="form-control" id="codigoBarras" minlength="5" maxlength="5" placeholder="99999"
+                                required ng-model="produto.codigoBarras" ng-class="{ 'is-invalid' : produtoForm.codigoBarras.$invalid && produtoForm.$submitted }">
+                            <div class="invalid-feedback" ng-show="produtoForm.codigoBarras.$invalid && produtoForm.$submitted">
+                                Código de barras é obrigatório
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="d-flex flex-row-reverse">
+                        <button class="btn btn-primary btn-lg" type="submit">Salvar</button>
+                        <a href="/" class="btn btn-link btn-lg">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

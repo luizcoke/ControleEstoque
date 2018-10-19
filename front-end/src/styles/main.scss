@@ -1,10 +1,43 @@
 $font-path: "./fonts" !default;
 $fa-font-path: $font-path;
 
-@import "./dist/scss/fontawesome.scss";
-@import "./dist/scss/regular";
-@import "./dist/scss/solid";
+@import "./assets/fontawesome/web-fonts-with-css/scss/fontawesome.scss";
+@import "./assets/fontawesome/web-fonts-with-css/scss/regular.scss";
+@import "./assets/fontawesome/web-fonts-with-css/scss/solid.scss";
 
 body {
+    overflow-y: scroll;
+}
 
+footer {
+    
+}
+
+.top-nav {
+    a {
+        color: #212529;
+        font-weight: 800;
+        text-decoration: none;
+    }
+}
+
+.produto {
+    padding: 3rem 0 4rem 0;
+
+    .table-bar {
+        margin: .78rem 0
+    }
+
+    table {
+        .table-actions {
+            a {
+                margin-left: .68rem;
+            }
+        }
+    }
+}
+
+.produtos-form {
+    margin-top: -14px;
+    padding: 0 0 4rem 0;
 }
