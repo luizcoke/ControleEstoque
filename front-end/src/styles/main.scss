@@ -1,0 +1,10 @@
+$font-path: "./fonts" !default;
+$fa-font-path: $font-path;
+
+@import "./dist/scss/fontawesome.scss";
+@import "./dist/scss/regular";
+@import "./dist/scss/solid";
+
+body {
+
+}
