@@ -9,8 +9,6 @@ body {
     overflow-y: scroll;
 }
 
-footer {}
-
 .top-nav {
     a {
         color: #212529;
@@ -19,11 +17,15 @@ footer {}
     }
 }
 
-.produto {
+.produto-list {
     padding: 3rem 0 4rem 0;
 
     .table-bar {
         margin: 0.78rem 0;
+
+        .actions > div {
+            float: left;
+        }
     }
 
     table {
@@ -38,6 +40,17 @@ footer {}
                 cursor: pointer;
             }
         }
+    }
+}
+
+.produtos-view {
+    margin-top: -14px;
+    padding: 3rem 0 4rem 0;
+
+    .card-action {
+        position: absolute;
+        right: 1rem;
+        top: 1.6rem;
     }
 }
 
