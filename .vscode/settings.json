@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e1e2ea63-9d5d-4f4b-9ab1-6e298b783dce/resourceGroups/poc/providers/Microsoft.Web/sites/ControleEstoqueFrontEnd",
+    "appService.deploySubpath": "front-end\\dist"
+}
