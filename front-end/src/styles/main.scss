@@ -1,0 +1,60 @@
+$font-path: "./fonts" !default;
+$fa-font-path: $font-path;
+
+@import "./assets/fontawesome/web-fonts-with-css/scss/fontawesome.scss";
+@import "./assets/fontawesome/web-fonts-with-css/scss/regular.scss";
+@import "./assets/fontawesome/web-fonts-with-css/scss/solid.scss";
+
+body {
+    overflow-y: scroll;
+}
+
+.top-nav {
+    a {
+        color: #212529;
+        font-weight: 800;
+        text-decoration: none;
+    }
+}
+
+.produto-list {
+    padding: 3rem 0 4rem 0;
+
+    .table-bar {
+        margin: 0.78rem 0;
+
+        .actions > div {
+            float: left;
+        }
+    }
+
+    table {
+        .table-actions {
+            a {
+                margin-left: .68rem;
+            }
+
+            &:not([href]):not([tabindex]) {
+                color: #007bff;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.produtos-view {
+    margin-top: -14px;
+    padding: 3rem 0 4rem 0;
+
+    .card-action {
+        position: absolute;
+        right: 1rem;
+        top: 1.6rem;
+    }
+}
+
+.produtos-form {
+    margin-top: -14px;
+    padding: 0 0 4rem 0;
+}

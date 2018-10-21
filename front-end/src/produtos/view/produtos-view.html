@@ -1,0 +1,24 @@
+<div class="produtos-view bg-light">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-action">
+                            <a href="#/produto/form/{{produto.idProduto}}" class="card-link"><i class="fas fa-edit"></i></a>
+                        </div>
+
+                        <h5 class="card-title">{{produto.nome}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <span class="badge badge-secondary">{{produto.categoria}}</span>
+                            <span class="badge badge-pill badge-primary">Qtn: {{produto.quantidade}} </span>
+                            <small>COD: {{produto.codigoBarras}}</small>
+                        </h6>
+                        <p class="card-text">{{produto.descricao}}</p>
+                        <a href="#/produtos" class="card-link"><i class="fas fa-angle-left"></i> voltar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
