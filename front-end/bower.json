@@ -1,6 +1,6 @@
 {
-  "name": "angularjs",
-  "description": "angularjs seed",
+  "name": "controle-estoque-angularjs",
+  "description": "Controle Estoque Angularjs",
   "main": "gulpfile.js",
   "authors": [
     "Luiz Coke"

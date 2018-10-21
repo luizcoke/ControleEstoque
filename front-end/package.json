@@ -1,8 +1,22 @@
 {
-  "name": "angular-seed",
+  "name": "controle-estoque-angularjs",
   "version": "1.0.0",
-  "description": "Angular seed",
+  "description": "Controle Estoque Angularjs",
+  "author": "Luiz Coke",
+  "license": "MIT",
   "main": "gulpfile.js",
+  "homepage": "https://controleestoquefrontend.azurewebsites.net",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizcoke/ControleEstoque.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luizcoke/ControleEstoque/issues"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^1.8.0",
@@ -17,18 +31,5 @@
     "jshint-stylish": "^2.2.1",
     "graceful-fs": "4.1.11"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wooptoo/angular-seed.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wooptoo/angular-seed/issues"
-  },
-  "homepage": "https://github.com/wooptoo/angular-seed#readme"
+  "devDependencies": {}
 }

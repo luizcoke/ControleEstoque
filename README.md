@@ -1,36 +1,27 @@
+
+
 Controle Estoque - AngularJS 1.7.x
+[**Live Demo**](https://controleestoquefrontend.azurewebsites.net/)
 ============
 
 * Development HTTP server
-* Gulp as the task runner
-* Bower for managing front-end assets
-* Sass for styles
-* Serve Angular templates from the templateCache
+* Gulp task runner
+* Bower front-end assets
+* Sass styles
+* Serve Angular templateCache
 * LiveReload
 * Configure which tasks to run through `gulpconfig.json`
-* Front End
-    AngularJs 1.7.x
-    Bootstrap 4
-    Font Awesome 5.4
-    Gulpjs
-    Sass
-* Web Api Services
-    .net core 2.1
-    Swagger
-    Service App
-    Azure
-    SQL Server Azure
-
 
 Start
 -----------
 
-`npm install`  
-`bower install`  
-`gulp`
+* `npm install --global gulp`
+* `npm install --global bower`
+* `npm install`
+* `bower install`  
+* `npm start`
 
-
-Como usar
+Commands
 -----
 
 * `gulp` - Executa development tasks

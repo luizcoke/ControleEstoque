@@ -22,8 +22,7 @@ App.config(function ($logProvider, $routeProvider, $httpProvider, $compileProvid
     $logProvider.debugEnabled(enableDebug);
 
     $compileProvider.debugInfoEnabled(enableDebug);
-
-    // $locationProvider.html5Mode(true).hashPrefix('!');
+    
     $locationProvider.hashPrefix('');
 
     $httpProvider.interceptors.push('HttpInterceptor');
