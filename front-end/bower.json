@@ -1,0 +1,28 @@
+{
+  "name": "controle-estoque-angularjs",
+  "description": "Controle Estoque Angularjs",
+  "main": "gulpfile.js",
+  "authors": [
+    "Luiz Coke"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/luizcoke/ControleEstoque",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "^2.2.9",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.4",
+    "angular": "^1.6.2",
+    "angular-route": "^1.6.2",
+    "angular-resource": "^1.6.2",
+    "bootstrap": "^4.0.0",
+    "fontawesome": "^5.4.1"
+  }
+}
