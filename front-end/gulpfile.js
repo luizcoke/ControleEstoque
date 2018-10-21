@@ -43,8 +43,9 @@ var assets = {
 var app = {
   scripts: [
     'src/*.js',
-    'src/scripts/*.js',
-    'src/scripts/**/*.js',
+    'src/@core/*.js',
+    'src/@shared/*.js',
+    'src/@shared/**/*.js',
     'src/produtos/*.js',
     'src/produtos/**/*.js'
   ],

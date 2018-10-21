@@ -2,11 +2,18 @@
  Template cache module.
 */
 angular.module('templates', [
-    'produtos.list',
-    'produtos.form'
+    'shared.module',
+    'produto.module'
 ]);
 
 var App = angular.module('App', ['ngRoute', 'ngResource', 'templates']);
+
+App.constant('config', {  
+    apiUrl: 'https://controleestoqueservice.azurewebsites.net',
+    baseUrl: '/',
+    version: "1.0.0"
+  });
+
 
 App.config(function ($logProvider, $routeProvider, $httpProvider, $compileProvider, $locationProvider) {
 

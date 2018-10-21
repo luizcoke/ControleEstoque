@@ -8,13 +8,9 @@ angular.module('produtos.form', ['ngRoute'])
   }])
 
   .controller('ProdutosFormCtrl', function ($scope) {
-
     $scope.submitForm = function (isValid) {
-
-      // check to make sure the form is completely valid
       if (isValid) {
         alert('our form is amazing');
       }
-
     };
   });

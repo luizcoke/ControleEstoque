@@ -25,17 +25,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
-                                    <td>@mdo</td>
+                                <tr ng-repeat="p in produtos | orderBy:produtos.idProduto">
+                                    <th scope="row">{{p.idProduto}}</th>
+                                    <td>{{p.codigoBarras}}</td>
+                                    <td>{{p.nome}}</td>
+                                    <td>{{p.descricao}}</td>
+                                    <td>{{p.quantidade}}</td>
+                                    <td>{{p.categoria}}</td>
                                     <td>
                                         <div class="table-actions text-right">
                                                 <a href="#"><i class="fas fa-edit"></i></a>
-                                                <a href="#"><i class="far fa-trash-alt"></i></a>
+                                                <a ng-click="remove(p.idProduto)" ><i class="far fa-trash-alt"></i></a>
                                         </div>
                                     </td>
                                 </tr>
